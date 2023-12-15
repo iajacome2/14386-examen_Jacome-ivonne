@@ -21,15 +21,12 @@ class UserListComponent extends HTMLElement {
     displayData(data) {
         const container = document.createElement('div');
 
-        // Mostrar el título del componente
         const title = document.createElement('h2');
         title.textContent = 'Lista de Usuarios';
         container.appendChild(title);
 
-        // Crear una tabla
         const table = document.createElement('table');
 
-        // Crear la fila de encabezados
         const headers = ['ID', 'Nombre', 'Usuario', 'Correo Electrónico', 'Teléfono', 'Empresa'];
         const headerRow = document.createElement('tr');
         headers.forEach(header => {
@@ -39,7 +36,6 @@ class UserListComponent extends HTMLElement {
         });
         table.appendChild(headerRow);
 
-        // Mostrar los datos en filas
         data.forEach(user => {
             const userRow = document.createElement('tr');
             userRow.innerHTML = `

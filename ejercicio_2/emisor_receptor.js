@@ -9,7 +9,7 @@ class EmisorComponent extends HTMLElement {
         `;
 
         const botonEmisor = this.querySelector('#boton-emisor');
-        // Al hacer clic en el botón, el componente emisor-component emite un evento personalizado con un mensaje.
+
         botonEmisor.addEventListener('click', () => {
             const customEvent = new CustomEvent('mensajeEnviado', {
                 detail: { mensaje: '¡Hola desde el emisor!' }
